@@ -8,6 +8,7 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100%;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -33,9 +34,9 @@ button {
 }
 
 
-/* -------------------------
-   画面切り替え
-------------------------- */
+/* =========================
+   SCREEN
+========================= */
 
 .screen {
   display: none;
@@ -46,9 +47,9 @@ button {
 }
 
 
-/* -------------------------
-   トップ
-------------------------- */
+/* =========================
+   HOME
+========================= */
 
 #homeScreen {
   padding-top: 14vh;
@@ -85,6 +86,9 @@ button {
 
   box-shadow:
     0 5px 15px rgba(0,0,0,.12);
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .main-button:active {
@@ -92,9 +96,9 @@ button {
 }
 
 
-/* -------------------------
-   名前表示
-------------------------- */
+/* =========================
+   NAME
+========================= */
 
 .name-display {
   width: 70%;
@@ -120,11 +124,6 @@ button {
   font-size: 17px;
   letter-spacing: 0;
 }
-
-
-/* -------------------------
-   五十音
-------------------------- */
 
 .kana-keyboard {
   display: flex;
@@ -158,11 +157,6 @@ button {
 .empty {
   visibility: hidden;
 }
-
-
-/* -------------------------
-   操作キー
-------------------------- */
 
 .control-keys {
   margin-top: 12px;
@@ -221,9 +215,9 @@ button {
 }
 
 
-/* -------------------------
+/* =========================
    ATM
-------------------------- */
+========================= */
 
 #atmScreen,
 #withdrawScreen {
@@ -255,11 +249,6 @@ button {
   font-size: 32px;
   letter-spacing: 5px;
 }
-
-
-/* -------------------------
-   テンキー
-------------------------- */
 
 .number-pad {
   width: 330px;
@@ -307,11 +296,6 @@ button {
   margin-top: 8px;
 }
 
-
-/* -------------------------
-   残高
-------------------------- */
-
 .balance-box {
   width: 400px;
 
@@ -343,9 +327,195 @@ button {
 }
 
 
-/* -------------------------
-   iPad横向き
-------------------------- */
+/* =========================
+   MASTER
+========================= */
+
+.master-screen {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.master-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.master-header h2 {
+  margin: 0;
+
+  font-size: 34px;
+  letter-spacing: 4px;
+}
+
+.master-header p {
+  margin: 3px 0 0;
+  color: #777;
+}
+
+.master-close {
+  padding: 10px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #222;
+  color: white;
+
+  font-size: 16px;
+}
+
+.master-card {
+  margin-bottom: 18px;
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(0,0,0,.08);
+}
+
+.master-card h3 {
+  margin-top: 0;
+}
+
+.master-description {
+  color: #666;
+  font-size: 14px;
+}
+
+.master-setting-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.master-setting-row input {
+  width: 180px;
+
+  padding: 10px;
+
+  border: 1px solid #aaa;
+  border-radius: 7px;
+
+  font-size: 20px;
+}
+
+.master-action {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #222;
+  color: white;
+
+  font-weight: bold;
+}
+
+.master-message {
+  min-height: 20px;
+
+  margin-top: 8px;
+
+  color: #555;
+  font-size: 14px;
+}
+
+.master-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.master-account-list {
+  margin-top: 15px;
+}
+
+.master-account {
+  display: grid;
+
+  grid-template-columns:
+    1.3fr
+    1.5fr
+    1fr
+    auto;
+
+  gap: 12px;
+
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-top: 1px solid #ddd;
+}
+
+.master-account:first-child {
+  border-top: none;
+}
+
+.master-account-name {
+  font-weight: bold;
+}
+
+.master-account-number {
+  font-family: monospace;
+}
+
+.master-account-balance {
+  font-weight: bold;
+}
+
+.account-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.account-actions button {
+  padding: 7px 10px;
+
+  border: 1px solid #aaa;
+  border-radius: 6px;
+
+  background: #eee;
+}
+
+.account-actions .delete-account {
+  color: #b00020;
+}
+
+.no-accounts {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+}
+
+.danger-card {
+  border: 1px solid #e0b5b5;
+}
+
+.danger-button {
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #b3261e;
+  color: white;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   iPad 横向き
+========================= */
 
 @media (max-height: 750px) {
 
@@ -373,4 +543,128 @@ button {
   .atm-display {
     height: 55px;
   }
+
+}
+
+
+/* ==========================================
+   iPad 本番運用設定
+========================================== */
+
+/* 画面全体 */
+html,
+body {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  overscroll-behavior: none;
+
+  touch-action: manipulation;
+}
+
+
+/* アプリ本体を画面いっぱいに */
+body {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100dvh;
+}
+
+
+/* POINT BANK本体 */
+.app {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* 各画面 */
+.screen {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding-left:
+    max(20px, env(safe-area-inset-left));
+
+  padding-right:
+    max(20px, env(safe-area-inset-right));
+
+  padding-top:
+    max(20px, env(safe-area-inset-top));
+
+  padding-bottom:
+    max(20px, env(safe-area-inset-bottom));
+}
+
+
+/* ==========================================
+   誤操作防止
+========================================== */
+
+/* 文字選択を禁止 */
+body,
+button,
+div,
+span,
+p,
+h1,
+h2,
+h3 {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+/* 長押し時のiOSメニュー防止 */
+button,
+a {
+  -webkit-touch-callout: none;
+}
+
+
+/* ボタンのダブルタップ拡大対策 */
+button {
+  touch-action: manipulation;
+
+  -webkit-tap-highlight-color:
+    transparent;
+}
+
+
+/* ドラッグ防止 */
+img {
+  -webkit-user-drag: none;
+
+  user-select: none;
+}
+
+
+/* MASTERの入力欄だけは選択可能 */
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
