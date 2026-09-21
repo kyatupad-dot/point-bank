@@ -1,0 +1,11 @@
+{
+  "name": "POINT BANK",
+  "short_name": "POINT BANK",
+  "description": "POINT BANK",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#eef1f3",
+  "theme_color": "#eef1f3"
+}

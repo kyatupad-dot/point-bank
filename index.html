@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0,
-    maximum-scale=1.0, user-scalable=no"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
   >
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <title>POINT BANK</title>
 
-  <link rel="stylesheet" href="style.css">
+
+  <!-- =====================================
+       PWA設定
+  ====================================== -->
+
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+
+  <meta
+    name="theme-color"
+    content="#eef1f3"
+  >
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="mobile-web-app-capable"
+    content="yes"
+  >
+
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="default"
+  >
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="POINT BANK"
+  >
+
+
+  <!-- =====================================
+       CSS
+  ====================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
 
+
 <body>
+
 
 <main class="app">
 
@@ -25,25 +70,34 @@
        トップ
   ====================================== -->
 
-  <section id="homeScreen" class="screen active">
+  <section
+    id="homeScreen"
+    class="screen active"
+  >
 
-    <h1>POINT BANK</h1>
+    <h1>
+      POINT BANK
+    </h1>
 
     <p class="subtitle">
       ご利用になるサービスを選択してください
     </p>
 
+
     <div class="home-buttons">
 
       <button
         id="openNameScreen"
+        type="button"
         class="main-button"
       >
         口座番号を調べる
       </button>
 
+
       <button
         id="openATM"
+        type="button"
         class="main-button"
       >
         ポイントを引き出す
@@ -59,13 +113,24 @@
        名前 → 口座番号
   ====================================== -->
 
-  <section id="nameScreen" class="screen">
+  <section
+    id="nameScreen"
+    class="screen"
+  >
 
-    <h2>口座番号確認</h2>
+    <h2>
+      口座番号確認
+    </h2>
 
-    <p>お名前を入力してください</p>
+    <p>
+      お名前を入力してください
+    </p>
 
-    <div id="nameDisplay" class="name-display">
+
+    <div
+      id="nameDisplay"
+      class="name-display"
+    >
 
       <span class="placeholder">
         ここに名前が表示されます
@@ -74,105 +139,202 @@
     </div>
 
 
+    <!-- 五十音キーボード -->
+
     <div class="kana-keyboard">
 
-      <div class="kana-column">
-        <button data-kana="あ">あ</button>
-        <button data-kana="い">い</button>
-        <button data-kana="う">う</button>
-        <button data-kana="え">え</button>
-        <button data-kana="お">お</button>
-      </div>
+
+      <!-- あ行 -->
 
       <div class="kana-column">
-        <button data-kana="か">か</button>
-        <button data-kana="き">き</button>
-        <button data-kana="く">く</button>
-        <button data-kana="け">け</button>
-        <button data-kana="こ">こ</button>
+
+        <button type="button" data-kana="あ">あ</button>
+        <button type="button" data-kana="い">い</button>
+        <button type="button" data-kana="う">う</button>
+        <button type="button" data-kana="え">え</button>
+        <button type="button" data-kana="お">お</button>
+
       </div>
 
-      <div class="kana-column">
-        <button data-kana="さ">さ</button>
-        <button data-kana="し">し</button>
-        <button data-kana="す">す</button>
-        <button data-kana="せ">せ</button>
-        <button data-kana="そ">そ</button>
-      </div>
+
+      <!-- か行 -->
 
       <div class="kana-column">
-        <button data-kana="た">た</button>
-        <button data-kana="ち">ち</button>
-        <button data-kana="つ">つ</button>
-        <button data-kana="て">て</button>
-        <button data-kana="と">と</button>
+
+        <button type="button" data-kana="か">か</button>
+        <button type="button" data-kana="き">き</button>
+        <button type="button" data-kana="く">く</button>
+        <button type="button" data-kana="け">け</button>
+        <button type="button" data-kana="こ">こ</button>
+
       </div>
 
-      <div class="kana-column">
-        <button data-kana="な">な</button>
-        <button data-kana="に">に</button>
-        <button data-kana="ぬ">ぬ</button>
-        <button data-kana="ね">ね</button>
-        <button data-kana="の">の</button>
-      </div>
+
+      <!-- さ行 -->
 
       <div class="kana-column">
-        <button data-kana="は">は</button>
-        <button data-kana="ひ">ひ</button>
-        <button data-kana="ふ">ふ</button>
-        <button data-kana="へ">へ</button>
-        <button data-kana="ほ">ほ</button>
+
+        <button type="button" data-kana="さ">さ</button>
+        <button type="button" data-kana="し">し</button>
+        <button type="button" data-kana="す">す</button>
+        <button type="button" data-kana="せ">せ</button>
+        <button type="button" data-kana="そ">そ</button>
+
       </div>
 
-      <div class="kana-column">
-        <button data-kana="ま">ま</button>
-        <button data-kana="み">み</button>
-        <button data-kana="む">む</button>
-        <button data-kana="め">め</button>
-        <button data-kana="も">も</button>
-      </div>
+
+      <!-- た行 -->
 
       <div class="kana-column">
-        <button data-kana="や">や</button>
-        <button class="empty"></button>
-        <button data-kana="ゆ">ゆ</button>
-        <button class="empty"></button>
-        <button data-kana="よ">よ</button>
+
+        <button type="button" data-kana="た">た</button>
+        <button type="button" data-kana="ち">ち</button>
+        <button type="button" data-kana="つ">つ</button>
+        <button type="button" data-kana="て">て</button>
+        <button type="button" data-kana="と">と</button>
+
       </div>
 
-      <div class="kana-column">
-        <button data-kana="ら">ら</button>
-        <button data-kana="り">り</button>
-        <button data-kana="る">る</button>
-        <button data-kana="れ">れ</button>
-        <button data-kana="ろ">ろ</button>
-      </div>
+
+      <!-- な行 -->
 
       <div class="kana-column">
-        <button data-kana="わ">わ</button>
-        <button data-kana="を">を</button>
-        <button data-kana="ん">ん</button>
-        <button data-kana="ー">ー</button>
-        <button class="empty"></button>
+
+        <button type="button" data-kana="な">な</button>
+        <button type="button" data-kana="に">に</button>
+        <button type="button" data-kana="ぬ">ぬ</button>
+        <button type="button" data-kana="ね">ね</button>
+        <button type="button" data-kana="の">の</button>
+
+      </div>
+
+
+      <!-- は行 -->
+
+      <div class="kana-column">
+
+        <button type="button" data-kana="は">は</button>
+        <button type="button" data-kana="ひ">ひ</button>
+        <button type="button" data-kana="ふ">ふ</button>
+        <button type="button" data-kana="へ">へ</button>
+        <button type="button" data-kana="ほ">ほ</button>
+
+      </div>
+
+
+      <!-- ま行 -->
+
+      <div class="kana-column">
+
+        <button type="button" data-kana="ま">ま</button>
+        <button type="button" data-kana="み">み</button>
+        <button type="button" data-kana="む">む</button>
+        <button type="button" data-kana="め">め</button>
+        <button type="button" data-kana="も">も</button>
+
+      </div>
+
+
+      <!-- や行 -->
+
+      <div class="kana-column">
+
+        <button type="button" data-kana="や">や</button>
+
+        <button
+          type="button"
+          class="empty"
+          disabled
+        ></button>
+
+        <button type="button" data-kana="ゆ">ゆ</button>
+
+        <button
+          type="button"
+          class="empty"
+          disabled
+        ></button>
+
+        <button type="button" data-kana="よ">よ</button>
+
+      </div>
+
+
+      <!-- ら行 -->
+
+      <div class="kana-column">
+
+        <button type="button" data-kana="ら">ら</button>
+        <button type="button" data-kana="り">り</button>
+        <button type="button" data-kana="る">る</button>
+        <button type="button" data-kana="れ">れ</button>
+        <button type="button" data-kana="ろ">ろ</button>
+
+      </div>
+
+
+      <!-- わ行 -->
+
+      <div class="kana-column">
+
+        <button type="button" data-kana="わ">わ</button>
+        <button type="button" data-kana="を">を</button>
+        <button type="button" data-kana="ん">ん</button>
+        <button type="button" data-kana="ー">ー</button>
+
+        <button
+          type="button"
+          class="empty"
+          disabled
+        ></button>
+
       </div>
 
     </div>
 
 
+    <!-- 補助キー -->
+
     <div class="control-keys">
 
-      <button id="dakutenButton">゛</button>
+      <button
+        id="dakutenButton"
+        type="button"
+      >
+        ゛
+      </button>
 
-      <button id="handakutenButton">゜</button>
+      <button
+        id="handakutenButton"
+        type="button"
+      >
+        ゜
+      </button>
 
-      <button id="smallButton">小</button>
+      <button
+        id="smallButton"
+        type="button"
+      >
+        小
+      </button>
 
-      <button id="deleteButton">←</button>
+      <button
+        id="deleteButton"
+        type="button"
+      >
+        ←
+      </button>
 
-      <button id="clearButton">クリア</button>
+      <button
+        id="clearButton"
+        type="button"
+      >
+        クリア
+      </button>
 
       <button
         id="convertButton"
+        type="button"
         class="dark-button"
       >
         決定
@@ -181,9 +343,13 @@
     </div>
 
 
+    <!-- 口座番号 -->
+
     <div class="result-area">
 
-      <p>あなたの口座番号</p>
+      <p>
+        あなたの口座番号
+      </p>
 
       <div id="numberResult">
         ---
@@ -192,7 +358,10 @@
     </div>
 
 
-    <button class="back-home back-button">
+    <button
+      type="button"
+      class="back-home back-button"
+    >
       トップへ戻る
     </button>
 
@@ -204,11 +373,19 @@
        ATM
   ====================================== -->
 
-  <section id="atmScreen" class="screen">
+  <section
+    id="atmScreen"
+    class="screen"
+  >
 
-    <h2>ポイント引き出し</h2>
+    <h2>
+      ポイント引き出し
+    </h2>
 
-    <p>口座番号を入力してください</p>
+    <p>
+      口座番号を入力してください
+    </p>
+
 
     <div
       id="accountInput"
@@ -220,27 +397,39 @@
 
     <div class="number-pad">
 
-      <button data-number="1">1</button>
-      <button data-number="2">2</button>
-      <button data-number="3">3</button>
+      <button type="button" data-number="1">1</button>
+      <button type="button" data-number="2">2</button>
+      <button type="button" data-number="3">3</button>
 
-      <button data-number="4">4</button>
-      <button data-number="5">5</button>
-      <button data-number="6">6</button>
+      <button type="button" data-number="4">4</button>
+      <button type="button" data-number="5">5</button>
+      <button type="button" data-number="6">6</button>
 
-      <button data-number="7">7</button>
-      <button data-number="8">8</button>
-      <button data-number="9">9</button>
+      <button type="button" data-number="7">7</button>
+      <button type="button" data-number="8">8</button>
+      <button type="button" data-number="9">9</button>
 
-      <button id="atmDelete">←</button>
-      <button data-number="0">0</button>
-      <button data-number="#">#</button>
+      <button
+        id="atmDelete"
+        type="button"
+      >
+        ←
+      </button>
+
+      <button type="button" data-number="0">
+        0
+      </button>
+
+      <button type="button" data-number="#">
+        #
+      </button>
 
     </div>
 
 
     <button
       id="accountConfirm"
+      type="button"
       class="dark-button atm-confirm"
     >
       決定
@@ -253,7 +442,10 @@
     ></div>
 
 
-    <button class="back-home back-button">
+    <button
+      type="button"
+      class="back-home back-button"
+    >
       トップへ戻る
     </button>
 
@@ -262,27 +454,41 @@
 
 
   <!-- =====================================
-       引き出し
+       ポイント引き出し
   ====================================== -->
 
-  <section id="withdrawScreen" class="screen">
+  <section
+    id="withdrawScreen"
+    class="screen"
+  >
 
-    <h2>口座情報</h2>
+    <h2>
+      口座情報
+    </h2>
+
 
     <p class="account-owner">
-      <span id="accountName"></span> 様
+
+      <span id="accountName"></span>
+
+      様
+
     </p>
 
 
     <div class="balance-box">
 
-      <span>現在の残高</span>
+      <span>
+        現在の残高
+      </span>
 
       <strong id="balanceDisplay">
         0
       </strong>
 
-      <span>pt</span>
+      <span>
+        pt
+      </span>
 
     </div>
 
@@ -302,27 +508,45 @@
 
     <div class="number-pad">
 
-      <button data-withdraw="1">1</button>
-      <button data-withdraw="2">2</button>
-      <button data-withdraw="3">3</button>
+      <button type="button" data-withdraw="1">1</button>
+      <button type="button" data-withdraw="2">2</button>
+      <button type="button" data-withdraw="3">3</button>
 
-      <button data-withdraw="4">4</button>
-      <button data-withdraw="5">5</button>
-      <button data-withdraw="6">6</button>
+      <button type="button" data-withdraw="4">4</button>
+      <button type="button" data-withdraw="5">5</button>
+      <button type="button" data-withdraw="6">6</button>
 
-      <button data-withdraw="7">7</button>
-      <button data-withdraw="8">8</button>
-      <button data-withdraw="9">9</button>
+      <button type="button" data-withdraw="7">7</button>
+      <button type="button" data-withdraw="8">8</button>
+      <button type="button" data-withdraw="9">9</button>
 
-      <button id="withdrawDelete">←</button>
-      <button data-withdraw="0">0</button>
-      <button id="withdrawAll">全額</button>
+      <button
+        id="withdrawDelete"
+        type="button"
+      >
+        ←
+      </button>
+
+      <button
+        type="button"
+        data-withdraw="0"
+      >
+        0
+      </button>
+
+      <button
+        id="withdrawAll"
+        type="button"
+      >
+        全額
+      </button>
 
     </div>
 
 
     <button
       id="withdrawConfirm"
+      type="button"
       class="dark-button atm-confirm"
     >
       引き出す
@@ -337,6 +561,7 @@
 
     <button
       id="returnATM"
+      type="button"
       class="back-button"
     >
       終了
@@ -346,18 +571,29 @@
 
 
 
-    <!-- =====================================
+  <!-- =====================================
        MASTER
   ====================================== -->
 
-  <section id="masterScreen" class="screen master-screen">
+  <section
+    id="masterScreen"
+    class="screen master-screen"
+  >
 
     <div class="master-header">
 
       <div>
-        <h2>MASTER</h2>
-        <p>POINT BANK SYSTEM CONTROL</p>
+
+        <h2>
+          MASTER
+        </h2>
+
+        <p>
+          POINT BANK SYSTEM CONTROL
+        </p>
+
       </div>
+
 
       <button
         id="closeMaster"
@@ -370,13 +606,17 @@
     </div>
 
 
+
     <!-- =================================
          初期ポイント設定
     ================================== -->
 
     <div class="master-card">
 
-      <h3>新規口座 初期ポイント</h3>
+      <h3>
+        新規口座 初期ポイント
+      </h3>
+
 
       <p class="master-description">
         これから新しく作成される口座の初期残高です。
@@ -395,7 +635,9 @@
           inputmode="numeric"
         >
 
-        <span>pt</span>
+        <span>
+          pt
+        </span>
 
 
         <button
@@ -417,6 +659,7 @@
     </div>
 
 
+
     <!-- =================================
          登録口座
     ================================== -->
@@ -425,7 +668,9 @@
 
       <div class="master-section-title">
 
-        <h3>登録口座</h3>
+        <h3>
+          登録口座
+        </h3>
 
         <span id="accountCount">
           0件
@@ -448,13 +693,17 @@
     </div>
 
 
+
     <!-- =================================
          システムリセット
     ================================== -->
 
     <div class="master-card danger-card">
 
-      <h3>システムリセット</h3>
+      <h3>
+        システムリセット
+      </h3>
+
 
       <p class="master-description">
         すべての口座・残高・設定を削除し、
@@ -477,7 +726,56 @@
 
 </main>
 
+
+<!-- =====================================
+     POINT BANK本体
+====================================== -->
+
 <script src="script.js"></script>
 
+
+<!-- =====================================
+     Service Worker
+     オフライン起動用
+====================================== -->
+
+<script>
+
+  if ("serviceWorker" in navigator) {
+
+    window.addEventListener(
+      "load",
+      () => {
+
+        navigator.serviceWorker
+          .register("./service-worker.js")
+
+          .then(registration => {
+
+            console.log(
+              "Service Worker registered:",
+              registration.scope
+            );
+
+          })
+
+          .catch(error => {
+
+            console.error(
+              "Service Worker registration failed:",
+              error
+            );
+
+          });
+
+      }
+    );
+
+  }
+
+</script>
+
+
 </body>
+
 </html>
